@@ -7,6 +7,7 @@ import {
   homeObjOne,
   homeObjTwo,
 } from "../components/ContentSection/ContentData";
+import Project from "../components/ProjectSection/Project";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,8 @@ const Home = () => {
       <Navbar toggle={toggle} />
       <Hero />
       <Content {...homeObjOne} />
+      <Content {...homeObjTwo} />
+      <Project />
       <Content {...homeObjTwo} />
     </>
   );
