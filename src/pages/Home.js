@@ -8,6 +8,7 @@ import {
   homeObjTwo,
 } from "../components/ContentSection/ContentData";
 import Project from "../components/ProjectSection/Project";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ const Home = () => {
       <Content {...homeObjTwo} />
       <Project />
       <Content {...homeObjTwo} />
+      <Footer />
     </>
   );
 };
