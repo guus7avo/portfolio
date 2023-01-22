@@ -1,5 +1,5 @@
 export const homeObjOne = {
-  id: "about",
+  id: "sobre",
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
@@ -17,7 +17,7 @@ export const homeObjOne = {
 };
 
 export const homeObjTwo = {
-  id: "discover",
+  id: "habilidades",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,

@@ -25,7 +25,6 @@ const Home = () => {
       <Content {...homeObjOne} />
       <Content {...homeObjTwo} />
       <Project />
-      <Content {...homeObjTwo} />
       <Footer />
     </>
   );

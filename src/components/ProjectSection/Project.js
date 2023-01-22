@@ -13,7 +13,7 @@ import {
 
 const Project = () => {
   return (
-    <ProjectContainer id="projects">
+    <ProjectContainer id="projetos">
       <ProjectH1>Meus Projetos</ProjectH1>
       <ProjectWrapper>
         <ProjectCard>
