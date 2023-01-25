@@ -26,7 +26,7 @@ const Hero = () => {
         <VideoBackground autoPlay loop muted src={video} type="video/mp4" />
       </HeroBackground>
       <HeroContent>
-        <HeroH1>Virtual Banking Made Easy</HeroH1>
+        <HeroH1>Oi, eu sou o Gustavo</HeroH1>
         <HeroP>
           Sign up for a new account today and recieve $250 in credits towards
           your next payment.

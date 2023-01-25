@@ -8,12 +8,12 @@ export const ProjectContainer = styled.div`
   align-items: center;
   background: #010606;
 
-  @media screen and (max-width: 760px) {
-    height: 1100px;
+  @media screen and (max-width: 1000px) {
+    height: 1400px;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1300px;
+    height: 1400px;
   }
 `;
 
@@ -26,11 +26,7 @@ export const ProjectWrapper = styled.div`
   grid-gap: 16px;
   padding: 0 50px;
 
-  @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 999px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }

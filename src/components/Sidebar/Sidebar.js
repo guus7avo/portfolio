@@ -1,13 +1,16 @@
 import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 import {
   CloseIcon,
   Icon,
   SidebarContainer,
   SidebarLink,
   SidebarMenu,
-  SidebarRoute,
   SidebarWrapper,
-  SideBtnWrap,
+  SidebarSocialLink,
+  // SidebarRoute,
+  // SideBtnWrap,
 } from "./SidebarStyles";
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -18,22 +21,63 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="sobre" onClick={toggle}>
+          <SidebarLink to="about" onClick={toggle}>
             Sobre
           </SidebarLink>
-          <SidebarLink to="habilidades" onClick={toggle}>
+          <SidebarLink to="skills" onClick={toggle}>
             Habilidades
           </SidebarLink>
-          <SidebarLink to="projetos" onClick={toggle}>
+          <SidebarLink to="projects" onClick={toggle}>
             Projetos
           </SidebarLink>
-          <SidebarLink to="contato" onClick={toggle}>
+          <SidebarLink to="contact" onClick={toggle}>
             Contato
           </SidebarLink>
+          <SidebarSocialLink
+            href="//www.linkedin.com/in/gustavo-nascimento-dos-santos/"
+            target="_blank"
+            aria-label="Linkedin"
+          >
+            <FaLinkedin />
+          </SidebarSocialLink>
+          <SidebarSocialLink
+            href="//www.github.com/guus7avo"
+            target="_blank"
+            aria-label="Github"
+          >
+            <FaGithub />
+          </SidebarSocialLink>
+          <SidebarSocialLink
+            href="//mailto:ps.gustavo19@gmail.com"
+            target="_blank"
+            aria-label="Mail"
+          >
+            <FiMail />
+          </SidebarSocialLink>
         </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoute to="/signin">Sign In</SidebarRoute>
-        </SideBtnWrap>
+        {/* <SideBtnWrap>
+          <SidebarSocialLink
+            href="//www.linkedin.com/in/gustavo-nascimento-dos-santos/"
+            target="_blank"
+            aria-label="Linkedin"
+          >
+            <FaLinkedin />
+          </SidebarSocialLink>
+          <SidebarSocialLink
+            href="//www.github.com/guus7avo"
+            target="_blank"
+            aria-label="Github"
+          >
+            <FaGithub />
+          </SidebarSocialLink>
+          <SidebarSocialLink
+            href="//mailto:ps.gustavo19@gmail.com"
+            target="_blank"
+            aria-label="Mail"
+          >
+            <FiMail />
+          </SidebarSocialLink>
+        </SideBtnWrap> */}
       </SidebarWrapper>
     </SidebarContainer>
   );

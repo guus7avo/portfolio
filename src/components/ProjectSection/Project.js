@@ -1,6 +1,7 @@
 import React from "react";
-import Icon1 from "../../images/svg-1.svg";
-import Icon2 from "../../images/car.svg";
+import Resitech from "../../images/resitech.jpg";
+import Pokeball from "../../images/pokeball.png";
+import Book from "../../images/book.png";
 import {
   ProjectCard,
   ProjectContainer,
@@ -10,26 +11,81 @@ import {
   ProjectP,
   ProjectWrapper,
 } from "./ProjectStyles";
+import { ButtonWrapper } from "../ContentSection/ContentStyles";
+import { Button } from "../ButtonStyled";
 
-const Project = () => {
+const Project = ({ buttonLabel, primary, dark, dark2 }) => {
   return (
-    <ProjectContainer id="projetos">
+    <ProjectContainer id="projects">
       <ProjectH1>Meus Projetos</ProjectH1>
       <ProjectWrapper>
         <ProjectCard>
-          <ProjectIcon src={Icon1} />
-          <ProjectH2>Subtítulo 1</ProjectH2>
-          <ProjectP>Descrição dos projetos 1</ProjectP>
+          <ProjectIcon src={Resitech} />
+          <ProjectH2>Resitech Solid Surface</ProjectH2>
+          <ProjectP>
+            Site estático para exibição dos produtos e serviços da empresa
+            Resitech.
+          </ProjectP>
+          <ButtonWrapper>
+            <Button
+              to="home"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              primary={primary ? 1 : 0}
+              dark={dark ? 1 : 0}
+              dark2={dark2 ? 1 : 0}
+            >
+              Acessar
+            </Button>
+          </ButtonWrapper>
         </ProjectCard>
         <ProjectCard>
-          <ProjectIcon src={Icon2} />
-          <ProjectH2>Subtítulo 2</ProjectH2>
-          <ProjectP>Descrição dos projetos 2</ProjectP>
+          <ProjectIcon src={Pokeball} />
+          <ProjectH2>Pokedex</ProjectH2>
+          <ProjectP>
+            Projeto que simula a Pokedex, dispositivo existente no anime
+            Pokemon.
+          </ProjectP>
+          <ButtonWrapper>
+            <Button
+              to="home"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              primary={primary ? 1 : 0}
+              dark={dark ? 1 : 0}
+              dark2={dark2 ? 1 : 0}
+            >
+              Acessar
+            </Button>
+          </ButtonWrapper>
         </ProjectCard>
         <ProjectCard>
-          <ProjectIcon src={Icon1} />
-          <ProjectH2>Subtítulo 3</ProjectH2>
-          <ProjectP>Descrição dos projetos 3</ProjectP>
+          <ProjectIcon src={Book} />
+          <ProjectH2>Marcador de Livros</ProjectH2>
+          <ProjectP>
+            Site para facilitar a organização dos seus livros de interesse.
+          </ProjectP>
+          <ButtonWrapper>
+            <Button
+              to="home"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              primary={primary ? 1 : 0}
+              dark={dark ? 1 : 0}
+              dark2={dark2 ? 1 : 0}
+            >
+              Acessar
+            </Button>
+          </ButtonWrapper>
         </ProjectCard>
       </ProjectWrapper>
     </ProjectContainer>

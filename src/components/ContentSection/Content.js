@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "../ButtonStyled";
+// import { Button } from "../ButtonStyled";
 import {
-  ButtonWrapper,
+  // ButtonWrapper,
   Column1,
   Column2,
   ContentContainer,
@@ -24,12 +24,12 @@ const Content = ({
   headline,
   darkText,
   description,
-  buttonLabel,
   img,
   alt,
-  primary,
-  dark,
-  dark2,
+  // buttonLabel,
+  // primary,
+  // dark,
+  // dark2,
 }) => {
   return (
     <>
@@ -41,7 +41,7 @@ const Content = ({
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
-                <ButtonWrapper>
+                {/* <ButtonWrapper>
                   <Button
                     to="home"
                     smooth={true}
@@ -55,7 +55,7 @@ const Content = ({
                   >
                     {buttonLabel}
                   </Button>
-                </ButtonWrapper>
+                </ButtonWrapper> */}
               </TextWrapper>
             </Column1>
             <Column2>

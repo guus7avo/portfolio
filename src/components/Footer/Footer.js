@@ -1,20 +1,21 @@
 import React from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 import {
   FooterContainer,
-  FooterLink,
-  FooterLinksContainer,
-  FooterLinksItems,
-  FooterLinksWrapper,
-  FooterLinkTitle,
   FooterWrap,
   SocialIconLink,
   SocialIcons,
   SocialLogo,
   SocialMedia,
   SocialMediaWrap,
-  WebsiteRights,
+  // FooterLink,
+  // FooterLinksContainer,
+  // FooterLinksItems,
+  // FooterLinksWrapper,
+  // FooterLinkTitle,
+  // WebsiteRights,
 } from "./FooterStyled";
 
 const Footer = () => {
@@ -25,7 +26,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-        <FooterLinksContainer>
+        {/* <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinksItems>
               <FooterLinkTitle>Título</FooterLinkTitle>
@@ -66,15 +67,13 @@ const Footer = () => {
               <FooterLink to="/">Six</FooterLink>
             </FooterLinksItems>
           </FooterLinksWrapper>
-        </FooterLinksContainer>
+        </FooterLinksContainer> */}
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
-              gus7avo
+              guus7avo
             </SocialLogo>
-            <WebsiteRights>
-              gus7avo @ {new Date().getFullYear()} All rights reserved.
-            </WebsiteRights>
+            {/* <WebsiteRights>{new Date().getFullYear()}</WebsiteRights> */}
             <SocialIcons>
               <SocialIconLink
                 href="//www.linkedin.com/in/gustavo-nascimento-dos-santos/"
@@ -90,8 +89,12 @@ const Footer = () => {
               >
                 <FaGithub />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Mail">
-                <FaMailBulk />
+              <SocialIconLink
+                href="//mailto:ps.gustavo19@gmail.com"
+                target="_blank"
+                aria-label="Mail"
+              >
+                <FiMail />
               </SocialIconLink>
             </SocialIcons>
           </SocialMediaWrap>

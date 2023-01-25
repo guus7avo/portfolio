@@ -49,7 +49,7 @@ const Navbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to="sobre"
+                  to="about"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -61,19 +61,19 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="habilidades"
+                  to="skills"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-81}
+                  offset={-80}
                 >
                   Habilidades
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="projetos"
+                  to="projects"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -84,8 +84,8 @@ const Navbar = ({ toggle }) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks
-                  to="contato"
+                {/* <NavLinks
+                  to="contact"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -93,17 +93,29 @@ const Navbar = ({ toggle }) => {
                   offset={-80}
                 >
                   Contato
-                </NavLinks>
+                </NavLinks> */}
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink>
+              <NavBtnLink
+                href="//www.linkedin.com/in/gustavo-nascimento-dos-santos/"
+                target="_blank"
+                aria-label="Linkedin"
+              >
                 <FaLinkedin />
               </NavBtnLink>
-              <NavBtnLink>
+              <NavBtnLink
+                href="//www.github.com/guus7avo"
+                target="_blank"
+                aria-label="Github"
+              >
                 <FaGithub />
               </NavBtnLink>
-              <NavBtnLink>
+              <NavBtnLink
+                href="//mailto:ps.gustavo19@gmail.com"
+                target="_blank"
+                aria-label="Mail"
+              >
                 <FiMail />
               </NavBtnLink>
             </NavBtn>

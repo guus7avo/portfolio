@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const ContentContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
+  background: ${({ lightBg }) => (lightBg ? "#fff" : "#010606")};
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
 `;
@@ -12,8 +12,8 @@ export const ContentContainer = styled.div`
 export const ContentWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
-  width: 100%;
+  height: 700px;
+  /* width: 100%; */
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
@@ -93,7 +93,7 @@ export const ImgWrap = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 100%;
+  width: 95%;
   margin: 0 0 10px 0;
   padding-right: 0;
 `;
