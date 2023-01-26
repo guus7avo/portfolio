@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "../ButtonStyled";
+import Dev from "../../images/memoji-dev.png";
 import video from "./../../videos/video.mp4";
 import {
   ArrowFoward,
@@ -9,6 +10,7 @@ import {
   HeroContainer,
   HeroContent,
   HeroH1,
+  HeroIcon,
   HeroP,
   VideoBackground,
 } from "./HeroStyled";
@@ -22,17 +24,12 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <HeroBackground>
-        <VideoBackground autoPlay loop muted src={video} type="video/mp4" />
-      </HeroBackground>
       <HeroContent>
+        <HeroIcon src={Dev} />
         <HeroH1>Oi, eu sou o Gustavo</HeroH1>
-        <HeroP>
-          Sign up for a new account today and recieve $250 in credits towards
-          your next payment.
-        </HeroP>
+        <HeroP>Desenvolvedor web, front-end e back-end.</HeroP>
         <HeroButtonWrapper>
-          <Button
+          {/* <Button
             to="signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
@@ -40,7 +37,7 @@ const Hero = () => {
             dark="true"
           >
             Get started {hover ? <ArrowFoward /> : <ArrowRight />}
-          </Button>
+          </Button> */}
         </HeroButtonWrapper>
       </HeroContent>
     </HeroContainer>

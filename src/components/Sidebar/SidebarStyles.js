@@ -56,7 +56,7 @@ export const SidebarLink = styled(LinkS)`
   cursor: pointer;
 
   &:hover {
-    color: blue;
+    color: #0362fc;
     transition: 0.2s ease-in-out;
   }
 `;
@@ -79,7 +79,7 @@ export const SidebarSocialLink = styled.a`
   cursor: pointer;
 
   &:hover {
-    color: blue;
+    color: #0362fc;
     transition: 0.2s ease-in-out;
   }
 `;
