@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.389e4054.css",
+    "main.js": "/portfolio/static/js/main.be5061eb.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/resitech.jpg": "/portfolio/static/media/resitech.c518875b6ab17ba5d49e.jpg",
+    "static/media/grinding.gif": "/portfolio/static/media/grinding.b071391a1919e5a08b2d.gif",
+    "static/media/1.png": "/portfolio/static/media/1.a3ab5cee27707ff05e65.png",
+    "static/media/2.png": "/portfolio/static/media/2.3dc3ca8141ca48d5f53f.png",
+    "static/media/3.png": "/portfolio/static/media/3.9742761b24f324bf19fb.png",
+    "static/media/book.png": "/portfolio/static/media/book.d37f3b9198223ff438a7.png",
+    "static/media/pokeball.png": "/portfolio/static/media/pokeball.4d0f791a7a4ee929332a.png",
+    "static/media/memoji-dev.png": "/portfolio/static/media/memoji-dev.5ca49982ea379e44c099.png",
+    "index.html": "/portfolio/index.html",
+    "main.389e4054.css.map": "/portfolio/static/css/main.389e4054.css.map",
+    "main.be5061eb.js.map": "/portfolio/static/js/main.be5061eb.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.389e4054.css",
+    "static/js/main.be5061eb.js"
+  ]
+}
