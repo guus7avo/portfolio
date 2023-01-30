@@ -3,7 +3,8 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-  background-color: ${({ scrollNav }) => (scrollNav ? "#000" : "transparent")};
+  background-color: ${({ scrollNav }) =>
+    scrollNav ? (props) => props.theme.primary : "transparent"};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -30,7 +31,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #fff;
+  color: ${(props) => props.theme.secondary};
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -39,6 +40,11 @@ export const NavLogo = styled(LinkR)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: ${(props) => props.theme.alternative};
+  }
 `;
 
 export const MobileIcon = styled.div`
@@ -52,7 +58,12 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: ${(props) => props.theme.secondary};
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      color: ${(props) => props.theme.alternative};
+    }
   }
 `;
 
@@ -72,13 +83,18 @@ export const NavItem = styled.li`
   height: 80px;
 `;
 export const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: ${(props) => props.theme.secondary};
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: ${(props) => props.theme.alternative};
+  }
 
   &.active {
     border-bottom: 3px solid #0362fc;
@@ -96,10 +112,9 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled.a`
   border-radius: 50px;
-  /* background: #0362fc; */
   white-space: nowrap;
   padding: 10px 5px;
-  color: white;
+  color: ${(props) => props.theme.secondary};
   font-size: 16px;
   outline: none;
   border: none;
@@ -107,9 +122,8 @@ export const NavBtnLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 
-  &.hover {
+  &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: red;
+    color: ${(props) => props.theme.alternative};
   }
 `;

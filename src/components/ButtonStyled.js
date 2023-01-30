@@ -3,10 +3,10 @@ import { Link } from "react-scroll";
 
 export const Button = styled(Link)`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? "#0362fc" : "#000")};
+  background: ${(props) => props.theme.secondary};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: ${({ dark }) => (dark ? "#000" : "#fff")};
+  color: ${(props) => props.theme.primary};
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
   border: none;
@@ -18,16 +18,16 @@ export const Button = styled(Link)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? "#fff" : "#0362fc")};
+    background: ${(props) => props.theme.alternative};
   }
 `;
 
 export const ButtonProject = styled.a`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? "#0362fc" : "#000")};
+  background: ${(props) => props.theme.secondary};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: ${({ dark }) => (dark ? "#000" : "#fff")};
+  color: ${(props) => props.theme.primary};
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
   border: none;
@@ -39,6 +39,6 @@ export const ButtonProject = styled.a`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? "#fff" : "#0362fc")};
+    background: ${(props) => props.theme.alternative};
   }
 `;

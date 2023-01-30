@@ -6,7 +6,7 @@ export const SkillsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: ${(props) => props.theme.primary};
 
   @media screen and (max-width: 768px) {
     height: 1400px;
@@ -21,7 +21,7 @@ export const SkillsWrapper = styled.div``;
 
 export const Title = styled.h1`
   font-size: 2.5rem;
-  color: #000;
+  color: ${(props) => props.theme.secondary};
   text-align: center;
   margin-bottom: 64px;
 

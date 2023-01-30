@@ -82,6 +82,9 @@ const Project = ({ buttonLabel, primary, dark, dark2 }) => {
               primary={primary ? 1 : 0}
               dark={dark ? 1 : 0}
               dark2={dark2 ? 1 : 0}
+              href="//guus7avo.github.io/pokedex/"
+              target="_blank"
+              aria-label="Pokedex-Github"
             >
               <FaLaptop />
             </ButtonProject>
@@ -107,9 +110,9 @@ const Project = ({ buttonLabel, primary, dark, dark2 }) => {
           <ProjectIcon src={Book} />
           <ProjectH2>Marcador de Livros</ProjectH2>
           <ProjectP>
-            Site para facilitar a organização dos seus livros de interesse. Além
-            de salvar o nome dos livros e autores, também é possível marcar os
-            livros que já foram lidos e os que ainda serão.
+            Site para facilitar a organização dos seus livros de interesse,
+            lidos ou não lidos, além de armazenar informações como nome dos
+            autores e gêneros.
           </ProjectP>
           <ButtonWrapper>
             <ButtonProject

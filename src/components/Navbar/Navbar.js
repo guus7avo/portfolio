@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { FaBars, FaGithub, FaLinkedin } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
-import { IconContext } from "react-icons/lib";
+import { FaBars, FaGithub, FaLinkedin, FaMoon } from "react-icons/fa";
+import { FiMail, FiSun } from "react-icons/fi";
 import { animateScroll as scroll } from "react-scroll";
 
 import {
@@ -16,8 +15,9 @@ import {
   NavMenu,
 } from "./NavbarStyles";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, toggleTheme, isDarkTheme }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [isToggled, setIsToggled] = useState(isDarkTheme);
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -35,93 +35,88 @@ const Navbar = ({ toggle }) => {
     scroll.scrollToTop();
   };
 
+  const onToggle = () => {
+    setIsToggled(!isToggled);
+    toggleTheme();
+  };
+
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav scrollNav={scrollNav}>
-          <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
-              Gustavo
-            </NavLogo>
-            <MobileIcon onClick={toggle}>
-              <FaBars />
-            </MobileIcon>
-            <NavMenu>
-              <NavItem>
-                <NavLinks
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Sobre
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="skills"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Habilidades
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="projects"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Projetos
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                {/* <NavLinks
-                  to="contact"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Contato
-                </NavLinks> */}
-              </NavItem>
-            </NavMenu>
-            <NavBtn>
-              <NavBtnLink
-                href="//www.linkedin.com/in/gustavo-nascimento-dos-santos/"
-                target="_blank"
-                aria-label="Linkedin"
+      <Nav scrollNav={scrollNav}>
+        <NavbarContainer>
+          <NavLogo to="/" onClick={toggleHome}>
+            guus7avo
+          </NavLogo>
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
+          <NavMenu>
+            <NavItem>
+              <NavLinks
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
               >
-                <FaLinkedin />
-              </NavBtnLink>
-              <NavBtnLink
-                href="//www.github.com/guus7avo"
-                target="_blank"
-                aria-label="Github"
+                Sobre
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="skills"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
               >
-                <FaGithub />
-              </NavBtnLink>
-              <NavBtnLink
-                href="//mailto:ps.gustavo19@gmail.com"
-                target="_blank"
-                aria-label="Mail"
+                Habilidades
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="projects"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
               >
-                <FiMail />
-              </NavBtnLink>
-            </NavBtn>
-          </NavbarContainer>
-        </Nav>
-      </IconContext.Provider>
+                Projetos
+              </NavLinks>
+            </NavItem>
+            <NavItem></NavItem>
+          </NavMenu>
+          <NavBtn>
+            <NavBtnLink
+              href="//www.linkedin.com/in/gustavo-nascimento-dos-santos/"
+              target="_blank"
+              aria-label="Linkedin"
+            >
+              <FaLinkedin />
+            </NavBtnLink>
+            <NavBtnLink
+              href="//www.github.com/guus7avo"
+              target="_blank"
+              aria-label="Github"
+            >
+              <FaGithub />
+            </NavBtnLink>
+            <NavBtnLink
+              href="//mailto:ps.gustavo19@gmail.com"
+              target="_blank"
+              aria-label="Mail"
+            >
+              <FiMail />
+            </NavBtnLink>
+            <NavBtnLink checked={isToggled} onClick={onToggle}>
+              {isDarkTheme === true ? <FiSun /> : <FaMoon />}
+            </NavBtnLink>
+          </NavBtn>
+        </NavbarContainer>
+      </Nav>
     </>
   );
 };

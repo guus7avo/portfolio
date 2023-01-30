@@ -7,23 +7,42 @@ import { about } from "../components/ContentSection/ContentData";
 import Project from "../components/ProjectSection/Project";
 import Footer from "../components/Footer/Footer";
 import Skills from "../components/SkillsSection/Skills";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "../styles/Theme";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState(null);
+  const isDarkTheme = theme === "dark";
 
-  const toggle = () => {
+  const toggleNavbar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleTheme = () => {
+    setTheme(isDarkTheme ? "light" : "dark");
   };
 
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
-      <Hero />
-      <Content {...about} />
-      <Skills />
-      <Project />
-      <Footer />
+      <ThemeProvider theme={isDarkTheme ? lightTheme : darkTheme}>
+        <Sidebar
+          isOpen={isOpen}
+          toggle={toggleNavbar}
+          toggleTheme={toggleTheme}
+          isDarkTheme={isDarkTheme}
+        />
+        <Navbar
+          toggle={toggleNavbar}
+          toggleTheme={toggleTheme}
+          isDarkTheme={isDarkTheme}
+        />
+        <Hero />
+        <Content {...about} />
+        <Skills />
+        <Project />
+        <Footer />
+      </ThemeProvider>
     </>
   );
 };

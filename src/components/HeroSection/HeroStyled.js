@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/md";
+import { MdArrowDownward, MdKeyboardArrowDown } from "react-icons/md";
 
 export const HeroContainer = styled.div`
-  background: black;
+  background: ${(props) => props.theme.primary};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@ export const VideoBackground = styled.video`
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  background: black;
+  background: ${(props) => props.theme.primary};
 `;
 
 export const HeroContent = styled.div`
@@ -42,7 +42,7 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-  color: white;
+  color: ${(props) => props.theme.secondary};
   font-size: 48px;
   text-align: center;
 
@@ -57,7 +57,7 @@ export const HeroH1 = styled.h1`
 
 export const HeroP = styled.p`
   margin-top: 0px;
-  color: white;
+  color: ${(props) => props.theme.secondary};
   font-size: 24px;
   text-align: center;
   max-width: 600px;
@@ -78,12 +78,12 @@ export const HeroButtonWrapper = styled.div`
   align-items: center;
 `;
 
-export const ArrowFoward = styled(MdArrowForward)`
+export const ArrowDownward = styled(MdArrowDownward)`
   margin-left: 8px;
   font-size: 20px;
 `;
 
-export const ArrowRight = styled(MdKeyboardArrowRight)`
+export const ArrowDown = styled(MdKeyboardArrowDown)`
   margin-left: 8px;
   font-size: 20px;
 `;
@@ -92,6 +92,12 @@ export const HeroIcon = styled.img`
   height: 200px;
   width: 200px;
   margin-bottom: 10px;
-  border: 2px solid #0362fc;
+  border: 2px solid ${(props) => props.theme.secondary};
   border-radius: 100px;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${(props) => props.theme.alternative};
+    border: 2px solid ${(props) => props.theme.alternative};
+  }
 `;

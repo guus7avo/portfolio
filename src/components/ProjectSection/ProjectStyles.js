@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
-  height: 800px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #000;
+  background: ${(props) => props.theme.primary};
 
   @media screen and (max-width: 1000px) {
-    height: 1400px;
+    height: 1500px;
   }
 
   @media screen and (max-width: 480px) {
@@ -33,11 +33,12 @@ export const ProjectWrapper = styled.div`
 `;
 
 export const ProjectCard = styled.div`
-  background: #fff;
+  background: ${(props) => props.theme.primary};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border: solid 1px ${(props) => props.theme.secondary};
   border-radius: 10px;
   max-height: 340px;
   padding: 30px;
@@ -59,7 +60,7 @@ export const ProjectIcon = styled.img`
 
 export const ProjectH1 = styled.h1`
   font-size: 2.5rem;
-  color: #fff;
+  color: ${(props) => props.theme.secondary};
   margin-bottom: 64px;
 
   @media screen and (max-width: 420px) {
@@ -70,11 +71,13 @@ export const ProjectH1 = styled.h1`
 export const ProjectH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
+  color: ${(props) => props.theme.secondary};
 `;
 
 export const ProjectP = styled.p`
   font-size: 1rem;
   text-align: center;
+  color: ${(props) => props.theme.secondary};
 `;
 
 export const ButtonWrapper = styled.div`

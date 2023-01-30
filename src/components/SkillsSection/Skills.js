@@ -36,13 +36,13 @@ const Skills = () => {
         <SkillsWrapper>
           <Title>Minhas habilidades</Title>
           <ButtonWrapper>
-            <Button to="" onClick={showLanguages}>
+            <Button to="languages" onClick={showLanguages}>
               Linguagens
             </Button>
-            <Button to="" onClick={showFrameworks}>
+            <Button to="frameworks" onClick={showFrameworks}>
               Frameworks
             </Button>
-            <Button to="" onClick={showOthers}>
+            <Button to="others" onClick={showOthers}>
               Outros
             </Button>
           </ButtonWrapper>

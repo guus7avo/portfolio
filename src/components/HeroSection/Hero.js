@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import { Button } from "../ButtonStyled";
 import Dev from "../../images/memoji-dev.png";
-import video from "./../../videos/video.mp4";
 import {
-  ArrowFoward,
-  ArrowRight,
-  HeroBackground,
+  ArrowDown,
+  ArrowDownward,
   HeroButtonWrapper,
   HeroContainer,
   HeroContent,
   HeroH1,
   HeroIcon,
   HeroP,
-  VideoBackground,
 } from "./HeroStyled";
 
 const Hero = () => {
@@ -29,15 +26,20 @@ const Hero = () => {
         <HeroH1>Oi, eu sou o Gustavo</HeroH1>
         <HeroP>Desenvolvedor web, front-end e back-end.</HeroP>
         <HeroButtonWrapper>
-          {/* <Button
-            to="signup"
+          <Button
+            to="about"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
             dark="true"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact="true"
+            offset={-80}
           >
-            Get started {hover ? <ArrowFoward /> : <ArrowRight />}
-          </Button> */}
+            Saiba mais {hover ? <ArrowDownward /> : <ArrowDown />}
+          </Button>
         </HeroButtonWrapper>
       </HeroContent>
     </HeroContainer>
