@@ -4,7 +4,7 @@ export const ContentContainer = styled.div`
   color: ${(props) => props.theme.secondary};
   background: ${(props) => props.theme.primary};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     padding: 100px 0;
   }
 `;
@@ -28,7 +28,7 @@ export const ContentRow = styled.div`
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     grid-template-areas: ${({ imgStart }) =>
       imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
   }
@@ -81,6 +81,10 @@ export const Subtitle = styled.p`
   line-height: 24px;
   color: ${(props) => props.theme.secondary};
   text-align: justify;
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 export const ButtonWrapper = styled.div`

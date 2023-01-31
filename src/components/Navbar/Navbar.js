@@ -105,7 +105,7 @@ const Navbar = ({ toggle, toggleTheme, isDarkTheme }) => {
               <FaGithub />
             </NavBtnLink>
             <NavBtnLink
-              href="//mailto:ps.gustavo19@gmail.com"
+              href="//mail.google.com/mail/u/0/#inbox?compose=CllgCJNstWzmNKcZfZtszWpMtHWBHZWlLzFMspNKsbVPfSqGmfrmsrXfFmTvWmSglSRSdhjRhpL"
               target="_blank"
               aria-label="Mail"
             >

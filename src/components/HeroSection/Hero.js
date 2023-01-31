@@ -36,7 +36,6 @@ const Hero = () => {
             duration={1000}
             spy={true}
             exact="true"
-            offset={-80}
           >
             Saiba mais {hover ? <ArrowDownward /> : <ArrowDown />}
           </Button>

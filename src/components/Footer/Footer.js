@@ -10,12 +10,7 @@ import {
   SocialLogo,
   SocialMedia,
   SocialMediaWrap,
-  // FooterLink,
-  // FooterLinksContainer,
-  // FooterLinksItems,
-  // FooterLinksWrapper,
-  // FooterLinkTitle,
-  // WebsiteRights,
+  WebsiteRights,
 } from "./FooterStyled";
 
 const Footer = () => {
@@ -26,54 +21,12 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-        {/* <FooterLinksContainer>
-          <FooterLinksWrapper>
-            <FooterLinksItems>
-              <FooterLinkTitle>Título</FooterLinkTitle>
-              <FooterLink to="/">One</FooterLink>
-              <FooterLink to="/">Two</FooterLink>
-              <FooterLink to="/">Three</FooterLink>
-              <FooterLink to="/">Four</FooterLink>
-              <FooterLink to="/">Five</FooterLink>
-              <FooterLink to="/">Six</FooterLink>
-            </FooterLinksItems>
-            <FooterLinksItems>
-              <FooterLinkTitle>Título</FooterLinkTitle>
-              <FooterLink to="/">One</FooterLink>
-              <FooterLink to="/">Two</FooterLink>
-              <FooterLink to="/">Three</FooterLink>
-              <FooterLink to="/">Four</FooterLink>
-              <FooterLink to="/">Five</FooterLink>
-              <FooterLink to="/">Six</FooterLink>
-            </FooterLinksItems>
-          </FooterLinksWrapper>
-          <FooterLinksWrapper>
-            <FooterLinksItems>
-              <FooterLinkTitle>Título</FooterLinkTitle>
-              <FooterLink to="/">One</FooterLink>
-              <FooterLink to="/">Two</FooterLink>
-              <FooterLink to="/">Three</FooterLink>
-              <FooterLink to="/">Four</FooterLink>
-              <FooterLink to="/">Five</FooterLink>
-              <FooterLink to="/">Six</FooterLink>
-            </FooterLinksItems>
-            <FooterLinksItems>
-              <FooterLinkTitle>Título</FooterLinkTitle>
-              <FooterLink to="/">One</FooterLink>
-              <FooterLink to="/">Two</FooterLink>
-              <FooterLink to="/">Three</FooterLink>
-              <FooterLink to="/">Four</FooterLink>
-              <FooterLink to="/">Five</FooterLink>
-              <FooterLink to="/">Six</FooterLink>
-            </FooterLinksItems>
-          </FooterLinksWrapper>
-        </FooterLinksContainer> */}
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
               guus7avo
             </SocialLogo>
-            {/* <WebsiteRights>{new Date().getFullYear()}</WebsiteRights> */}
+            <WebsiteRights>ps.gustavo19@gmail.com</WebsiteRights>
             <SocialIcons>
               <SocialIconLink
                 href="//www.linkedin.com/in/gustavo-nascimento-dos-santos/"
@@ -90,7 +43,7 @@ const Footer = () => {
                 <FaGithub />
               </SocialIconLink>
               <SocialIconLink
-                href="//mailto:ps.gustavo19@gmail.com"
+                href="//mail.google.com/mail/u/0/#inbox?compose=CllgCJNstWzmNKcZfZtszWpMtHWBHZWlLzFMspNKsbVPfSqGmfrmsrXfFmTvWmSglSRSdhjRhpL"
                 target="_blank"
                 aria-label="Mail"
               >

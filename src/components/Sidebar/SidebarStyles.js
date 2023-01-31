@@ -34,6 +34,7 @@ export const Icon = styled.div`
 
 export const SidebarWrapper = styled.div`
   color: ${(props) => props.theme.secondary};
+  align-items: center;
 `;
 
 export const SidebarMenu = styled.ul`
@@ -41,6 +42,7 @@ export const SidebarMenu = styled.ul`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(7, 60px);
   text-align: center;
+  margin-left: -40px;
 `;
 
 export const SidebarLink = styled(LinkS)`

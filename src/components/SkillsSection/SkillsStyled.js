@@ -8,12 +8,20 @@ export const SkillsContainer = styled.div`
   align-items: center;
   background: ${(props) => props.theme.primary};
 
-  @media screen and (max-width: 768px) {
-    height: 1400px;
+  @media screen and (max-width: 900px) {
+    padding: 250px 0;
+  }
+
+  @media screen and (max-width: 630px) {
+    padding: 250px 0;
+  }
+
+  @media screen and (max-width: 535px) {
+    padding: 150px 0;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1400px;
+    padding: 100px 0;
   }
 `;
 
@@ -25,8 +33,13 @@ export const Title = styled.h1`
   text-align: center;
   margin-bottom: 64px;
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 535px) {
     font-size: 2rem;
+    margin-top: 256px;
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -38,7 +51,7 @@ export const ButtonWrapper = styled.div`
   margin-top: 20px;
   padding: 0 50px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     grid-template-columns: 1fr;
     padding: 0 50px;
     grid-gap: 50px;
